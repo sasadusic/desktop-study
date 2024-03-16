@@ -27,6 +27,18 @@
     color: var(--header);
     transition: .2s;
 }
+.mb-12{
+    margin-bottom: var(--space-sm);
+}
+.mt-12{
+    margin-top: var(--space-sm);
+}
+.mb-24{
+    margin-bottom: var(--space-mid);
+}
+.mt-24{
+    margin-top: var(--space-mid);
+}
 #side{
     position: fixed;
     left: 0;
@@ -234,6 +246,10 @@
     background: var(--main);
     color: white;
 }
+.light{
+    background: var(--main-trans-03);
+    color: white;
+}
 .home-right{
     position: relative;
     width: 60%;
@@ -255,10 +271,12 @@
     width: 100%;
     /* height: 20vh; */
     display: grid;
+    /* width: 80%; */
     grid-template-columns: repeat(5, 1fr);
     /* justify-content: space-evenly; */
     /* align-items: end; */
     background: #ffffff;
+    padding: 0 10vw;
     padding-top: var(--space-big);
     padding-bottom: var(--space-big);
 }
@@ -268,7 +286,7 @@
     color: var(--text);
     display: flex;
     align-items: center;
-    padding-left: 24px;
+    /* padding-left: 24px; */
 }
 .nike-cont{
     padding: var(--space-sm);
@@ -307,78 +325,9 @@
     left: 12px;
     color: var(--label);
 }
-.card-cont{
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 32px;
-}
-.card{
-    flex:1;
-    position: relative;
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-bottom: 32px;
-    min-width: 280px;
-    max-width: 500px;
-    cursor: pointer;
-    /* width: minmax(280px, 400px); */
-}
-.card:hover{
-    scale: 1.07
-}
-.card-img{
-    position: relative;
-    height: 40%;
-    width: 100%;
-    background-image: url('card-img.jpg');
-    background-size: cover;
-    background-position: center center;
-    z-index: 100;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    padding: 90px;
-}
-.card-right{
-    padding: 24px;
-    position: relative;
-    height: 60%;
-    width: 100%;
-}
-.card-top{
-    position: relative;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 12px;
-}
-.card-header{
-    font-size: var(--font-big);
-    font-weight: 900;
-}
-.card-top i{
-    font-size: 20px;
-    color: var(--main);
-}
-.card-body{
-    margin: 0;
-    padding: 0;
-    font-size: var(--font-sm);
-    color: var(--label);
-    margin-bottom: var(--space-mid);
-}
-.card-footer{
-    position: relative;
-    width: 100%;
-    /* background: #000; */
-    display: flex;
-    flex: 1;
-    gap: 4px;
-    color: var(--text);
-}
+
+
+
 .footer-left, .footer-message, .call{
     border: 1px solid var(--border);
     padding: 8px;
@@ -486,5 +435,184 @@
         justify-content: center; */
     }
 }
-
-
+section, footer{
+    position: relative;
+    width: calc(100vw - 240px);
+    margin-left: auto;
+}
+.sub-header{
+    margin-bottom: var(--space-big);
+    color: var(--header);
+}
+.phar{
+    font-size: var(--font-mid);
+    color: var(--header);
+}
+.phar-bold{
+    font-weight: 600;
+}
+.products{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    background: linear-gradient( #ffffff, #fff, #fff, rgba(51, 217, 178, .3));
+}
+.prod-cont{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-mid);
+    width: 80%;
+}
+.prod-card{
+    box-shadow: 5px 5px 15px 5px #02020221;
+    border-radius: 8px;
+    padding: var(--space-mid);
+    background: #fff;
+}
+.card-up{
+    display: flex;
+    align-items: center;
+    gap: var(--space-mid);
+    margin-bottom: var(--space-sm);
+}
+.label{
+    font-size: var(--font-big);
+    font-weight: 700;
+    color: var(--header);
+}
+.prod-down{
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 60px;
+    margin-bottom: 80px;
+}
+.skills, .inter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+}
+.inter{
+    margin-bottom: 80px;
+}
+.skills .label{
+    margin-bottom: var(--space-sm);
+}
+.skills-cont{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+    gap: var(--space-mid);
+}
+.skill-card{
+    box-shadow: 5px 5px 15px 5px #02020221;
+    border-radius: 8px;
+    padding: var(--space-mid);
+    background: #fff;
+    display: flex;
+    align-items: center;
+    gap: var(--space-mid);
+}
+.card-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.inter-cont{
+    display: flex;
+    align-items: center;
+    gap: var(--space-mid);
+    width: 80%;
+}
+.inter-nike-cont{
+    width: max-content;
+    padding: 4px 8px;
+    background: var(--main-trans-03);
+    border-radius: 50%;
+    color: var(--main);
+    margin-right: var(--space-sm);
+    margin-bottom: var(--space-sm);
+}
+.inter-nike-cont i{
+    color: var(--main);
+    font-size: var(--font-sm);
+}
+.inter-image{
+    width: 400px;
+}
+.inter-col{
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-mid);
+}
+.team{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.team-image{
+    position: absolute;
+    top: 8%;
+}
+.team .btn{
+    margin-top: var(--space-mid);
+}
+.team-cont{
+    display: flex;
+}
+.team-left{
+    padding-top: 80px;
+    padding-left: 10vw;
+    padding-bottom: 80px;
+    padding-right: 20vw;
+    background: var(--main-trans-03);
+}
+.team-right{
+    padding-top: 80px;
+    padding-right: 10vw;
+    padding-bottom: 80px;
+    padding-left: 20vw;
+    background: var(--main-trans-01);
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+.footer-cont{
+    width: 100%;
+    padding: 0 10vw;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+}
+.muted{
+    color: var(--label);
+}
+.contact-cont{
+    display: flex;
+    gap: var(--space-sm);
+}
+.contact-cont .phar{
+    margin-right: var(--space-mid);
+}
+.icon-cont{
+    display: flex;
+    gap: 6px;
+}
+.icon{
+    width: 32px;
+    height: 32px;
+    background: #2e2e2e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon i{
+    color: #fff;
+}

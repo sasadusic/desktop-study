@@ -22,6 +22,19 @@
     color: var(--header);
     transition: .2s;
 }
+.header{
+    color: var(--header);
+}
+.phar{
+    font-size: var(--font-sm);
+    color: var(--label);
+}
+.phar.big{
+    font-size: var(--font-mid);
+}
+.mb-sm{
+    margin-bottom: var(--space-sm);
+}
 #side{
     position: fixed;
     left: 0;
@@ -201,62 +214,58 @@
     display: flex;
     flex-wrap: wrap;
     gap: 32px;
+    margin-top: 60px;
 }
 .card{
     flex:1;
     position: relative;
     background: #fff;
     border-radius: 10px;
-    overflow: hidden;
+    /* overflow: hidden; */
     margin-bottom: 32px;
-    min-width: 280px;
-    max-width: 500px;
+    min-width: 180px;
+    max-width: 400px;
     cursor: pointer;
     /* width: minmax(280px, 400px); */
 }
 .card:hover{
     scale: 1.07
 }
-.card-img{
+.card-img-cont{
     position: relative;
-    height: 40%;
     width: 100%;
-    background-image: url('card-img.jpg');
-    background-size: cover;
-    background-position: center center;
     z-index: 100;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    padding: 90px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+.prod-image{
+    position: absolute;
+    width: 60%;
+    top: -30px;
 }
 .card-right{
-    padding: 24px;
+    padding: 0 24px 24px 24px;
     position: relative;
-    height: 60%;
     width: 100%;
 }
 .card-top{
     position: relative;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 12px;
+    margin-bottom: var(--space-sm);
+    text-align: center;
 }
 .card-header{
     font-size: var(--font-big);
     font-weight: 900;
-}
-.card-top i{
-    font-size: 20px;
-    color: var(--main);
+    color: var(--header);
 }
 .card-body{
     margin: 0;
     padding: 0;
-    font-size: var(--font-sm);
-    color: var(--label);
-    margin-bottom: var(--space-mid);
+    text-align: center;
 }
 .card-footer{
     position: relative;
@@ -267,8 +276,8 @@
     gap: 4px;
     color: var(--text);
 }
-.footer-left, .footer-message, .call{
-    border: 1px solid var(--border);
+.footer-left, .loc, .settings{
+    border: 1px solid var(--bg-light);
     padding: 8px;
     border-radius: 3px;
 }
